@@ -14,4 +14,11 @@ describe 'The game engine' do |variable|
 			minimal.class.to_s.should eql("Team")
 		end
 	end
+
+	context 'role tests' do
+		it 'can be instantiated' do
+			minimal = Role.new("Player", "Midfielder", "M")
+			minimal.class.to_s.should eql("Role")
+		end
+	end
 end

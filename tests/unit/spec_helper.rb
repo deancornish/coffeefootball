@@ -2,6 +2,7 @@ require "simplecov"
 SimpleCov.start
 require_relative '../../Person'
 require_relative '../../Team'
+require_relative '../../Role'
 
 
 RSpec.configure do |config|
