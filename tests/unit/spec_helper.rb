@@ -3,6 +3,7 @@ SimpleCov.start
 require_relative '../../Person'
 require_relative '../../Team'
 require_relative '../../Role'
+require_relative '../../League'
 
 
 RSpec.configure do |config|
