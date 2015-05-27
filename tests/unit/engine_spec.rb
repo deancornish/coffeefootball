@@ -10,6 +10,28 @@ describe 'The game engine' do |variable|
 			minimal.gender.should eql "F"
 			minimal.age.should eql 35
 			minimal.salary.should eql 11000
+		end
+		it 'can be instantiated' do	
+			pn = Person.new("Sarah", "Walsh", "F", 35, 11000)
+			pn2 = Person.new("Megan", "Walsh", "F", 35, 11000)
+			tm = Team.new("Melbourne Victory Women's Football Club", "MVWFC", "Melbourne", 300000, "60%", "Navy blue", "White")
+			rl = Role.new("Player", "Midfielder", "M")
+			lg = League.new("Westfield W-League", "W-League", "Australia", 9)
+
+			Bpn = Person.new("Sarah", "Walsh", "F", 35, 11000)
+			Bpn2 = Person.new("Megan", "Walsh", "F", 35, 11000)
+			Btm = Team.new("Melbourne Victory Women's Football Club", "MVWFC", "Melbourne", 300000, "60%", "Navy blue", "White")
+			Brl = Role.new("Player", "Midfielder", "M")
+			Blg = League.new("Westfield W-League", "W-League", "Australia", 9)
+
+			i = [pn,pn2,tm,rl,lg],[Bpn,Bpn2,Btm,Brl,Blg]
+			# f = i.select {|frankie| frankie.class.name == "Person"}
+			i.each do |line|
+				line.each do |classes|
+					puts classes.inspect
+				end
+
+			end
 
 		end
   end
