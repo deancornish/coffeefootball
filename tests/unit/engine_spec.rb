@@ -3,13 +3,16 @@ require_relative './spec_helper.rb'
 describe 'The game engine' do |variable|
 	context 'person tests' do
 		it 'can be instantiated' do
-			minimal = Person.new("Sarah", "Walsh", "F", 35, 11000)
+			minimal = Person.new("Sarah", "Walsh", "F", 35, 11000,"Player","Midfielder", "M")
 			minimal.should be_an_instance_of Person
 			minimal.first_name.should eql "Sarah"
 			minimal.last_name.should eql "Walsh"
 			minimal.gender.should eql "F"
 			minimal.age.should eql 35
 			minimal.salary.should eql 11000
+			minimal.job_type.should eql "Player"
+			minimal.position.should eql "Midfielder"
+			minimal.position_abbrv.should eql "M"
 		end
   end
 
@@ -27,15 +30,6 @@ describe 'The game engine' do |variable|
 		end
 	end
 
-	context 'role tests' do
-		it 'can be instantiated' do
-			minimal = Role.new("Player", "Midfielder", "M")
-			minimal.should be_an_instance_of Role
-			minimal.title.should eql "Player"
-			minimal.position.should eql "Midfielder"
-			minimal.position_abbrv.should eql "M"
-		end
-	end
 	context 'league tests' do
 		it 'can be instantiated' do
 			minimal = League.new("Westfield W-League", "W-League", "Australia", 9)
